@@ -1,72 +1,212 @@
-﻿body {
-}
-.main-nav li .glyphicon {
-    margin-right: 10px;
+﻿html {
+    color: black;
 }
 
-/* Highlighting rules for nav menu items */
-.main-nav li a.active,
-.main-nav li a.active:hover,
-.main-nav li a.active:focus {
-    background-color: #4189C7;
+@font-face {
+    font-family: 'arcadepi';
+    src: url('fonts/arcadepi.ttf') format('truetype');
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    font-family: arcadepi;
+    font-size: 20px;
     color: white;
+    background-color: black;
 }
 
-/* Keep the nav menu independent of scrolling and on top of other items */
-.main-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+main {
+    flex: 1;
+    display: flex;
+    background-color: #111;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
+    align-content: center;
+    text-align: center;
 }
 
-@media (max-width: 767px) {
-    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
-    body {
-        padding-top: 190px;
-    }
-
-    .collapse {
-        display: block;
-    }
+aside {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (min-width: 768px) {
-    /* On large screens, convert the nav menu to a vertical sidebar */
-    .main-nav {
-        height: 100%;
-        width: calc(25% - 20px);
-    }
-    .main-nav .navbar {
-        border-radius: 0px;
-        border-width: 0px;
-        height: 100%;
-    }
-    .main-nav .navbar-header {
-        float: none;
-    }
-    .main-nav .navbar-collapse {
-        border-top: 1px solid #444;
-        padding: 0px;
-    }
-    .main-nav .navbar ul {
-        float: none;
-    }
-    .main-nav .navbar li {
-        float: none;
-        font-size: 15px;
-        margin: 6px;
-    }
-    .main-nav .navbar li a {
-        padding: 10px 16px;
-        border-radius: 4px;
-    }
-    .main-nav .navbar a {
-        /* If a menu item's text is too long, truncate it */
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+article {
+    flex: 1
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+    flex: 1;
+}
+
+header,
+footer {
+    --codeproject-bg-color: #f90;
+    background: var(--codeproject-bg-color);
+    /*height: 20vh;*/
+    padding: 10px;
+}
+
+article {
+    padding: 10px;
+    flex: 1 1 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    flex: 0 0 80px;
+}
+
+.wa-logo {
+    height: 64px;
+}
+
+.bob {
+    align-self: flex-end;
+    justify-content: flex-end;
+    width: 42px;
+    height: 48px;
+}
+
+.inside-page {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex: 1;
+}
+
+app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: center;
+    height: 100%;
+}
+
+.statsLine {
+    text-align: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.next-container {
+    display: flex;
+    flex-flow: column;
+}
+
+
+
+.board {
+    width: 212px;
+    background-color: #444;
+}
+
+.next-piece.piece-columns-2 {
+    width: 52.4px;
+}
+
+.next-piece.piece-columns-3 {
+    width: 78.6px;
+}
+
+.next-piece.piece-columns-4 {
+    width: 104.8px;
+}
+
+.colorChip {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 0.5px;
+}
+
+.HolyGrail {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.HolyGrail-body {
+    display: flex;
+    flex: 1;
+}
+
+main {
+    flex: 1;
+}
+
+nav, aside {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+    background: #000;
+    padding: 10px;
+    width: 20vw;
+}
+
+nav {
+    /* put the nav on the left */
+    order: -1;
+}
+
+button {
+    font-size: 20px;
+    font-family: arcadepi;
+}
+
+.shapecolor-0 {
+    background-color: #000000;
+}
+
+.shapecolor-I {
+    background-color: #EC9D04;
+}
+.shapecolor-J {
+    background-color: #A16F94;
+}
+.shapecolor-L {
+    background-color: #E3B6A1;
+}
+.shapecolor-O {
+    background-color: #86A2AD;
+}
+.shapecolor-S {
+    background-color: #86A2AD;
+}
+.shapecolor-T {
+    background-color: #02458C;
+}
+.shapecolor-Z {
+    background-color: #C6745F;
 }
